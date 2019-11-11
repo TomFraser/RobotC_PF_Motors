@@ -15,7 +15,7 @@ t_motorControl currentMotorSpeeds; // Holds the current motor speeds
 
 bool pulsed[4] = {false};
 
-bool initFlag = false;
+int initFlag = 0;
 
 t_motor mArray[4] = {motorA, motorB, motorC, motorD};
 
@@ -23,8 +23,10 @@ void initPFMotors(); // Init PF motors
 
 int getPFMotorSpeed(int motor); // Get speed of each motor
 
-void updateMotors(); // Pulse speeds
+task updateMotors(); // Pulse speeds
 
-void startMotorsTask();
+void startMotorsTask(); // Start the motor task
+
+void exampleSetSpeedFunction(); // An example function on how to set motor speeds in your main loop / program
 
 #endif
